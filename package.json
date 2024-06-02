@@ -1,0 +1,21 @@
+{
+  "name": "quill-questr",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "start:frontend": "npm run dev --workspace frontend",
+    "start:backend": "node backend/dist/server.js",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  },
+  "dependencies": {
+    "shared": "^1.0.0"
+  }
+}
